@@ -61,6 +61,11 @@ h4 {
     font-weight: 400;
 }
 
+h5 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
 p {
     line-height: 1.8rem;
 }
@@ -262,4 +267,36 @@ header a img {
     padding-top: 1rem;
     text-transform: uppercase;
     letter-spacing: .25rem;
+}
+
+/* Features section */
+#features {
+    padding: 3rem 2rem;
+    background-color: var(--purple);
+    color: var(--white);
+    gap: 2rem;
+    flex-direction: column;
+}
+
+#features .cards {
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#features h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+#features h5, #features h3 {
+    color: var(--purple);
+}
+
+#features button {
+    background-color: var(--purple);
+    color: var(--white);
 }
