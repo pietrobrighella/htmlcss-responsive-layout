@@ -54,6 +54,7 @@ h2 {
 
 h3 {
     font-size: 1.5rem;
+    line-height: 2rem;
 }
 
 h4 {
@@ -72,7 +73,7 @@ h6 {
 }
 
 p {
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 
 button {
@@ -99,7 +100,7 @@ button i {
 header {
     background-color: var(--blue);
     color: var(--white);
-    padding: .3rem 2rem;
+    padding: 1rem 2rem;
 }
 
 header a {
@@ -170,7 +171,7 @@ header a img {
 }
 
 #planning h2 {
-    padding: 3rem;
+    padding: 3rem 0;
 }
 
 #planning p:not(#planning div p) {
@@ -319,6 +320,10 @@ header a img {
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 2rem;
+}
+
+#about-us h2 {
+    color: var(--purple);
 }
 
 .about-box h3 {
