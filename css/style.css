@@ -174,15 +174,15 @@ header a img {
     padding: 3rem 0;
 }
 
-#planning p:not(#planning div p) {
+#planning p:not(#planning div div p) {
     padding-bottom: 2rem;
 }
 
-#planning img {
+#planning div img {
     width: 90%;
 }
 
-#planning div {
+#planning div div {
     background-color: var(--white);
     border-radius: 3rem;
     padding: 2rem;
@@ -191,7 +191,7 @@ header a img {
     color: var(--black);
 }
 
-#planning div div {
+#planning div div div {
     width: 3rem;
     height: 3rem;
     background-color: var(--purple);
@@ -200,7 +200,7 @@ header a img {
     text-align: center;
 }
 
-#planning div p {
+#planning div div p {
     font-style: italic;
     text-align: center;
 }
@@ -208,17 +208,24 @@ header a img {
 /* Testimonials section */
 #testimonials {
     padding: 3rem 2rem;
-    background-color: var(--white);
+}
+
+.t-box {
     flex-direction: column;
     gap: 2rem;
     text-align: center;
 }
 
-#testimonials h2 {
-    color: var(--purple);
+.t-box p {
+    font-size: 1.2rem;
 }
 
-#testimonials div:not(.testimonials-img-1, .testimonials-img-2, .testimonials-img-3, .review) {
+.t-box h2 {
+    color: var(--purple);
+    padding: 2rem 0;
+}
+
+.t-box div:not(.testimonials-img-1, .testimonials-img-2, .testimonials-img-3, .t-intro, .review) {
     background-color: var(--purple);
     border-radius: 3rem;
     padding: 2rem;
@@ -262,7 +269,7 @@ header a img {
 }
 
 .review i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .review p {
@@ -280,11 +287,14 @@ header a img {
     padding: 3rem 2rem;
     background-color: var(--purple);
     color: var(--white);
+}
+
+.f-box {
     gap: 2rem;
     flex-direction: column;
 }
 
-#features .cards {
+.f-box .cards {
     background-color: var(--white);
     color: var(--black);
     border-radius: 1rem;
@@ -293,16 +303,16 @@ header a img {
     align-items: flex-start;
 }
 
-#features h2 {
+.f-box h2 {
     text-align: center;
     padding-bottom: 2rem;
 }
 
-#features h5, #features h3 {
+.f-box h5, .f-box h3 {
     color: var(--purple);
 }
 
-#features button {
+.f-box button {
     background-color: var(--purple);
     color: var(--white);
 }
@@ -367,18 +377,21 @@ header a img {
     padding: 3rem 2rem;
     background-color: var(--purple);
     color: var(--white);
+}
+
+.g-box {
     gap: 2rem;
     flex-direction: column;
     text-align: center;
 }
 
-#get-started button {
+.g-box button {
     background-color: var(--white);
     padding: 18px 60px;
     color: var(--purple);
 }
 
-#get-started a {
+.g-box a {
     color: var(--white);
     text-decoration: underline;
 }
