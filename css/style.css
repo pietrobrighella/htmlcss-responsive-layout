@@ -148,6 +148,10 @@ header a img {
     gap: 2rem;
 }
 
+.first-card div {
+    flex-direction: column;
+}
+
 .first-card {
     padding-bottom: 0;
 }
