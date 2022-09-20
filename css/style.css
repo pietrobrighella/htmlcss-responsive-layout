@@ -24,24 +24,24 @@
 html {
     font-family: 'PT Sans', sans-serif;
     scroll-behavior: smooth;
-    font-size: 16px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .d-flex {
     display: flex;
 }
 
-.justify-between {
+.flex-between {
     justify-content: space-between;
 }
 
-.align-center {
+.flex-center {
     align-items: center;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 a {
@@ -62,21 +62,17 @@ h4 {
     font-weight: 400;
 }
 
-h5 {
+.ftr-number {
     font-size: 3rem;
     font-weight: 700;
-}
-
-h6 {
-    font-size: 4rem;
-    color: var(--orange);
+    color: var(--purple);
 }
 
 p {
     line-height: 2rem;
 }
 
-button {
+.btn-std {
     background-color: var(--blue);
     color: var(--white);
     padding: 12px 40px;
@@ -85,6 +81,14 @@ button {
     letter-spacing: .25rem;
     font-weight: 700;
     font-size: 1rem;
+}
+
+.btn-xl {
+    background-color: var(--white);
+    padding: 18px 60px;
+    color: var(--purple);
+    border: 0;
+    border-radius: 50px;
 }
 
 button i {
@@ -100,7 +104,8 @@ button i {
 header {
     background-color: var(--blue);
     color: var(--white);
-    padding: 1rem 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 header a {
@@ -138,14 +143,13 @@ header a img {
     font-size: 5rem;
 }
 
-.cards {
+.cards, .first-card div {
     padding: 2rem 1.5rem;
     gap: 2rem;
 }
 
 .first-card {
     padding-bottom: 0;
-    gap: 2rem;
 }
 
 .first-card h3, .first-card p, .first-card button {
@@ -153,36 +157,41 @@ header a img {
     text-align: left;
 }
 
-#card-blocs div {
+.cards, .first-card {
     background-color: var(--light-blu);
     border-radius: 1rem;
     flex-direction: column;
 }
 
-#card-blocs div img {
+.first-card img {
     width: 90%;
 }
 
 /* Planning section */
 #planning {
-    padding: 3rem 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     background-color: var(--purple);
     color: var(--white);
 }
 
-#planning h2 {
+.plan-blocs {
+    flex-direction: column;
+}
+
+.pln-bloc-1 h2 {
     padding: 3rem 0;
 }
 
-#planning p:not(#planning div div p) {
+.pln-bloc-1 p {
     padding-bottom: 2rem;
 }
 
-#planning div img {
+.pln-bloc-1 img, .pln-bloc-2 img {
     width: 90%;
 }
 
-#planning div div {
+.pln-bloc-2 {
     background-color: var(--white);
     border-radius: 3rem;
     padding: 2rem;
@@ -191,23 +200,25 @@ header a img {
     color: var(--black);
 }
 
-#planning div div div {
+.pln-bloc-2 div {
     width: 3rem;
     height: 3rem;
     background-color: var(--purple);
     padding: 1rem;
     border-radius: 2rem;
+    line-height: 1.2rem;
     text-align: center;
 }
 
-#planning div div p {
+.pln-bloc-2 p {
     font-style: italic;
     text-align: center;
 }
 
 /* Testimonials section */
 #testimonials {
-    padding: 3rem 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .t-box {
@@ -284,7 +295,8 @@ header a img {
 
 /* Features section */
 #features {
-    padding: 3rem 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     background-color: var(--purple);
     color: var(--white);
 }
@@ -294,7 +306,12 @@ header a img {
     flex-direction: column;
 }
 
-.f-box .cards {
+.b-cards {
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+}
+
+.f-box .b-cards {
     background-color: var(--white);
     color: var(--black);
     border-radius: 1rem;
@@ -303,7 +320,7 @@ header a img {
     align-items: flex-start;
 }
 
-.f-box h2 {
+#features h2 {
     text-align: center;
     padding-bottom: 2rem;
 }
@@ -320,6 +337,11 @@ header a img {
 /* Features about us */
 #about-us {
     padding: 3rem 2rem;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.about-bloc {
     gap: 2rem;
     flex-direction: column;
 }
@@ -342,10 +364,13 @@ header a img {
 
 .btn-xs {
     background-color: var(--purple);
+    color: var(--white);
+    border-radius: 50px;
     font-size: .8rem;
     padding: 6px 14px;
     font-weight: 400;
     letter-spacing: 0;
+    border: 0;
 }
 
 .btn-xs i {
@@ -374,7 +399,8 @@ header a img {
 
 /* Features get started */
 #get-started {
-    padding: 3rem 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     background-color: var(--purple);
     color: var(--white);
 }
@@ -385,20 +411,20 @@ header a img {
     text-align: center;
 }
 
-.g-box button {
-    background-color: var(--white);
-    padding: 18px 60px;
-    color: var(--purple);
-}
-
 .g-box a {
     color: var(--white);
     text-decoration: underline;
 }
 
+.g-box span {
+    font-size: 4rem;
+    color: var(--orange);
+}
+
 /************* FOOTER *************/
 footer {
-    padding: 3rem 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     background-color: var(--dark-grey);
     color: var(--white);
     text-align: center;
@@ -411,4 +437,147 @@ footer p:last-child {
 footer a {
     color: var(--purple);
     text-decoration: underline;
+}
+
+/************* MEDIA QUERY *************/
+@media screen and (min-width:768px) {
+    .container {
+        max-width: 750px;
+    }
+
+    #card-blocs {
+        flex-flow: row wrap;
+        text-align: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 3rem 2rem;
+    }
+    
+    .cards {
+        width: calc((100% / 3) - 15px);
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
+    
+    .first-card {
+        align-items: flex-start;
+        width: calc(((100% / 3) * 2) - 7.5px);
+        padding-bottom: 0;
+    }
+    
+    .first-card img {
+        width: 65%;
+    }
+
+    .pln-bloc-1 h2 {
+        font-size: 4rem;
+    }
+
+    .t-rvw-box {
+        flex-direction: row !important;
+    }
+
+    .review {
+    flex-basis: 65%;
+    text-align: left;
+    }
+
+    .f-box {
+        flex-flow: row wrap;
+    }
+
+    .b-cards {
+        width: calc((100% / 2) - 1rem);
+    }
+
+    #about-us {
+        flex-direction: row;
+        gap: 6rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .about-bloc h2 {
+        font-size: 4rem;
+    }
+
+    footer .container {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .container {
+        max-width: 980px;
+    }
+
+    .first-card {
+        flex-direction: row;
+    }
+
+    .first-card div {
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+
+    .first-card img {
+        align-self: end;
+        width: 40%;
+    }
+
+    .plan-blocs {
+        flex-direction: row;
+        gap: 3rem;
+        align-items: flex-end;
+    }
+
+    .pln-bloc-1 {
+        flex-basis: 60%;
+    }
+
+    .pln-bloc-2 {
+        flex-basis: 40%;
+        gap: 1rem;
+    }
+
+    .pln-bloc-1 img {
+        width: 70%;
+    }
+
+    .pln-bloc-2 img {
+        width: 70%;
+    }
+
+    .pln-bloc-1 h2 {
+        font-size: 2rem;
+    }
+
+    .f-box {
+        gap: 1rem;
+    }
+
+    .b-cards {
+        gap: 1rem;
+        width: calc((100% / 3) - 1rem);
+    }
+
+    #about-us {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    .g-box {
+        padding-right: 20rem;
+        padding-left: 20rem;
+    }
+
+    footer .container {
+        max-width: 500px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
