@@ -44,6 +44,10 @@ html {
     align-items: center;
 }
 
+ul {
+    list-style: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -116,7 +120,7 @@ nav {
     display: none;
 }
 
-header span i {
+.hmg-menu i {
     font-size: 20pt;
 }
 
@@ -513,6 +517,31 @@ footer a {
 @media screen and (min-width:992px) {
     .container {
         max-width: 980px;
+    }
+
+    .hmg-menu {
+        display: none;
+    }
+
+    nav {
+        display: block;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    .btn-start {
+        background-color: var(--white);
+        color: var(--black);
+        padding: 8px 20px;
+        border-radius: 40px;
+        border: 0;
+        font-size: 1rem;
+    }
+
+    .btn-start a {
+        color: var(--black);
     }
 
     .first-card {
